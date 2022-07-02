@@ -33,7 +33,7 @@ jobs:
         uses: mcpierce/github-commit-timestamp-tagger@master
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        base_version: "latest"
+          base_version: "latest"
 
       - name: Create a Release for the latest PDFs so we can download them easily
         uses: actions/create-release@v1
