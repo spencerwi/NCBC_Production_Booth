@@ -37,6 +37,18 @@ In particular, we use the [Mermaid](https://mermaid-js.github.io/mermaid/#/) dia
 
 ### Generating the PDF yourself locally
 
+#### Using Docker
+
+[Docker](https://docker.com) is a tool that allows you to "pre-package" a virtual computer, and run it again later.
+
+There's a "docker image" prebuilt that contains everything you need to generate these PDFs at [spencerwi/ncbc_production_booth_docs](https://hub.docker.com/repository/docker/spencerwi/ncbc_production_booth_docs). To use it:
+
+1. Install Docker
+2. Clone or download this repository
+3. From inside that repository, at a command-line, run either `generate_using_docker.sh` if you're on Linux/MacOS, or `generate_using_docker.bat` if you're on Windows.
+
+#### Without Docker
+
 We generate these PDFs using [pandoc](https://pandoc.org), passing it through a Mermaid filter plugin to make sure diagrams get rendered out correctly. 
 
 You should make sure you have the following installed on your machine:
