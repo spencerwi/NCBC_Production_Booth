@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Generate new PDFs
 
 # Controls when the workflow will run
 on:
@@ -25,11 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Prep docker image to generate PDFs
-        run: docker build -t spencerwi/ncbc_production_booth_docs .
-
       - name: Generate PDFs
-        run: docker run -v "$PWD:/data" -w"/data" spencerwi/ncbc_production_booth_docs
+        run: docker run --volume "$GITHUB_WORKSPACE:/data" --workdir "/data" spencerwi/ncbc_production_booth_docs
 
       - name: Create a Release for these changes
         uses: actions/create-release@v1
