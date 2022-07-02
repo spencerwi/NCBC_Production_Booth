@@ -44,7 +44,7 @@ jobs:
         with:
           draft: false
           prerelease: false
-          tag_name: 'latest'
+          tag_name: ${{ env.GITHUB_SHA }}
           release_name: 'Latest version'
           body: |
             Updated PDFs for NCBC Production Booth Documents
