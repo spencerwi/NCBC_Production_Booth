@@ -28,14 +28,27 @@ jobs:
       - name: Generate PDFs
         run: docker run --volume "$GITHUB_WORKSPACE:/data" --workdir "/data" spencerwi/ncbc_production_booth_docs
 
-      - name: Create a Release for these changes
+      - name: Tag these PDFs as the latest ones
+        uses: EndBug/latest-tag@latest
+        with:
+          # You can change the name of the tag or branch with this input.
+          # Default: 'latest'
+          ref: 'latest'
+
+          # If a description is provided, the action will use it to create an annotated tag. If none is given, the action will create a lightweight tag.
+          # Default: ''
+        description: Updated PDFs for NCBC Production Booth Documents
+
+      - name: Create a Release for the latest PDFs so we can download them easily
         uses: actions/create-release@v1
         id: create_release
         with:
           draft: false
           prerelease: false
-          release_name: ${{ github.ref }}
-          tag_name: ${{ github.ref }}
+          tag_name: 'latest'
+          release_name: Version ${{ github.ref }}
+          body: |
+            Updated PDFs for NCBC Production Booth Documents
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
