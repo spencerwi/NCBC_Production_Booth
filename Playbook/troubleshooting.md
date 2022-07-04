@@ -14,12 +14,12 @@ Check the following things:
 3. Is the Mac using the right audio output? It should be using the "Headphones" audio output:
     1. In the top-right corner of the Mac, look for an icon that either looks like speakers or like a pair of headphones.
     2. Click on that icon.
-    3. You should see a dropdown with a few options for audio outputs. Choose "Headphones", since the Mac connects with the sound board through the Mac's headphone jack.
+    3. You should see a dropdown with a few options for audio outputs. Choose "Headphones", since the Mac connects with the sound board through the Mac's headphone jack.  
         ![Screenshot of Mac audio output menu](mac_audio_output.png)
 4. Is ProPresenter using the right audio output? It should be using "Built-in Output"
-    1. In ProPresenter, in the top-left corner of the Mac, open the "ProPresenter" menu, and choose "Preferences" > "Audio"
+    1. In ProPresenter, in the top-left corner of the Mac, open the "ProPresenter" menu, and choose "Preferences" > "Audio"  
         ![Screenshot of choosing the ProPresenter Audio Preferences menu option](propresenter_audio_preferences_menu.png)
-    2. In the window that opens opens up, find the "Device" picker for the Main audio output. Open it and choose "Built-in Output".
+    2. In the window that opens opens up, find the "Device" picker for the Main audio output. Open it and choose "Built-in Output".  
         ![Screenshot of choosing the "Built-in Output" for the Main audio output in ProPresenter](propresenter_audio_settings_window.png)
 
 ## I opened up OBS Studio, but the the camera views for the podium are missing
@@ -34,7 +34,7 @@ Double-check that the "Projector and Camera" lightswitch is on. If it's off:
 
 To make this window appear if it doesn't appear automatically:
 
-1. In OBS Studio, click the "View" menu, then click "Multiview (Windowed)"
+1. In OBS Studio, click the "View" menu, then click "Multiview (Windowed)"  
     ![Screenshot of clicking the "Multiview" menu item](obs_studio_multiwindow_menu.PNG)
 2. This will open the window you want, so just drag it over onto the other monitor.
 
